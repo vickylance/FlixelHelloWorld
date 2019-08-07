@@ -1,0 +1,20 @@
+{
+  "name": "flixel-auto-build",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:html5": "sh watcher.sh",
+    "watcher": "watch 'npm run build:html5' './source'",
+    "serve:html5": "live-server export/html5/bin",
+    "start": "concurrently -n Watch,Build,Serve \"npm run watcher\" \"npm run build:html5\" \"npm run serve:html5\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "watch": "^1.0.2",
+    "concurrently": "^4.1.0"
+  }
+}
